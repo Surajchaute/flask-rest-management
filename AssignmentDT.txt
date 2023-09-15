@@ -1,0 +1,138 @@
+    LIST
+
+
+1.what is list in python?
+list is the order collection of data
+it's is mutuble and represent by []
+its also allow duplicate elements
+its has so many methods like sort,count,indexing,pop,remove
+
+2. How to create a list?
+>>my_list = [5, 3, 5, "python", [1, 2, 3]]
+
+3.How to access elements of a list?
+>>print(my_list[2])  # Outputs "5"
+
+4.how to check is an element is in list?
+>> if "python" in my_list:
+      print("python is present")
+	  
+5.how to concate two list?
+>> combined = my_list + [8,9,10]
+
+6.what is copy in list?
+>> copy_list = my_list.copy()
+
+7.what is difference between 'append' and 'extend'in lists?
+>>my_list.append([8,9])  result [5, 3, 5, "python", [1, 2, 3],[8,9]]
+  my_list.extend([8,9])  result [5, 3, 5, "python", [1, 2, 3],8,9]
+  
+8. How can I add an element to a list?
+>>append(item) to add an item to the end.
+  insert(index, item) to add an item at a specified index.
+  extend([items]) to add multiple items to the end.
+  
+9.write a program to remove the elements of a list that are divisible by 3?
+>> list1 = [33,21,24,15,18,27]
+ele =0
+
+for ele in list1:
+   if ele%3 == 0:
+     list1.remove(ele)
+	 
+print(list1)
+
+10.write a python program to find the maximum and minimum elements in a list?
+>>
+  l1 =[4,5,-1,10,20,30,40,50,60,80,50]
+  
+  print("The maximun number in list is:",max(l1)) 80
+  print("The minimum number in list is :",min(l1)) -1
+  
+  
+  TUPLE
+  
+ 1.how is tuple different from list?
+ >> "Tuple" is mutable you can modify its define square brackets[]
+ >> "LIst" is immtable once its create you can't modify it.define in parentheses()
+ 
+ 2.why use a tuple instaed of a list?
+ >> Tuples can be more memory and faster for certain operation since their size is fixed.
+ >>They are also hashable (if they contain only hashable items) and can be used as keys in dictionaries, unlike lists
+ 
+ 3.if tuple are immtable,why can i have a list inside a tuple and modify that list?
+ >> The tuple itself is immtable meaning you cannot change structure 
+ >>  However, objects referenced by the tuple, such as lists, remain mutable.
+ 
+ 4.Difference between List VS Tuple
+ 
+>>Mutability:
+
+List: Mutable - you can modify its content (add, remove, or modify items).
+Tuple: Immutable - once created, you cannot alter its content.
+Syntax:
+
+List: Defined using square brackets []. Example: my_list = [1, 2, 3]
+Tuple: Defined using parentheses (). Example: my_tuple = (1, 2, 3). 
+
+>>Use cases:
+
+List: Use when:
+The sequence might need to change (e.g., adding or removing elements).
+You need list-specific methods like append, remove, etc.
+Tuple: Use when:
+The sequence should not change.
+You want to use the sequence as a dictionary key.
+You want to ensure data integrity by ensuring that the data does not get modified unintentionally.
+
+>>Methods:
+
+List: Comes with a variety of methods like append(), remove(), pop(), extend(), etc.
+Tuple: Offers fewer methods due to its immutability, notably count() and index().
+
+>>Memory:
+
+List: Generally, consumes a bit more memory because of the overhead associated with the mutability features it supports.
+Tuple: Tends to be more memory-efficient because of its immutability.
+Safety:
+
+List: Being mutable, lists can be modified accidentally leading to potential bugs or unintended side effects.
+Tuple: The immutability of tuples ensures that their content remains consistent and unmodified throughout the program, 
+leading to safer code in certain scenarios.
+
+5.Find the length of a tuple?
+>>def tuple_length(t):
+    return len(t)
+
+t = (1, 2, 3, 4)
+print(tuple_length(t))
+
+
+  Dictionary
+
+1.what is dictionary in python?
+>> A dictonary in python is an unordered collection of data in key:value pair form 
+>> it's mutuble and keys in a dictionary are unique
+
+2.How do I create a dictionary?
+>>my_dict = {"key1": "value1", "key2": "value2"}
+
+# Using dict constructor
+my_dict = dict(key1="value1", key2="value2")
+
+3.features of Dictionary?
+>> Key-Value Pair Structure: 
+  Every element in the dictionary is stored as a pair of a key and its corresponding value.
+  
+>>Unordered:
+  The items in dictionaries are not stored in any specific order,
+  which means that the order in which items are added may not be preserved
+  
+>>Mutable: 
+  Dictionaries are mutable, 
+  which means you can add, delete, and change their key-value pairs.
+  
+>>Key Error: 
+  If you try to access or remove an item using a key that doesn't exist in the dictionary, Python raises a KeyError.
+  
+  
